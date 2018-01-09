@@ -23,10 +23,10 @@
 					<header id="header" class="alt">
 						<h1><a href="index.html">Trevor Barron</a></h1>
 						<nav>
+							<a href="#projects">Projects</a>
 							<a href="#news">News</a>
 							<a href="#profile">Profile</a>
 							<a href="#pubs">Publications</a>
-							<a href="#projects">Projects</a>
 							<a href="#footer">Contact</a>
 							<a href="https://tpbarron.github.io/papers/TrevorBarronCV.pdf">CV</a>
 							<!-- <a href="#menu">Menu</a> -->
@@ -51,12 +51,79 @@
 						<div class="inner">
 							<!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
 							<h2>Trevor Barron</h2>
-							<p>I am a masters student in the <a href="https://interactive-robotics.engineering.asu.edu/">Interactive Robotics Lab</a> at ASU focusing on reinforcement learning techniques for robot control.</p>
+							<p>I am a graduate student in the <a href="https://interactive-robotics.engineering.asu.edu/">Interactive Robotics Lab</a> at Arizona State University focusing on <b>reinforcement learning</b> techniques for <b>robot control</b>.</p>
 						</div>
 					</section>
 
 				<!-- Wrapper -->
 					<section id="wrapper">
+
+						<section id="projects" class="wrapper alt style2">
+							<div class="inner">
+								<h2 class="major">Projects</h2>
+								<p>A summary of some recent projects.</p>
+								<section class="features">
+									<article>
+										<!-- <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a> -->
+										<div class="image"><img src="images/walker2d.png" alt="" /></div>
+										<h3 class="major">Information Maximizing Exploration with a Latent Dynamics Model</h3>
+										<p>
+											This work extended a previous exploration method, Variational Information Maximizing Exploration, that is based on the idea of optimism in the face of uncertainty. Essentially, we incentivize exploring parts of the environment about which little is known.
+										</p>
+										<p>
+											In VIME, a separate Bayesian dynamics model is learned and intrinsic reward bonuses are derived from the amount of information gained by visiting a state. Our key observation is based on a <a href="https://users.cs.duke.edu/~parr/icml08.pdf">relationship</a> between linear one-step forward models and linear value estimates. We propose fitting the dynamics model in the features found by the final hidden layer of the neural network value estimator. This has two significant advantages: (1) the dimensionality of the inputs are untied from the dimensionality of the Bayesian model and (2) the theory suggests that since the value estimate is linear in these features, the model can be as well. This simplifies the Bayesian modeling. We find this to be the case and observe that information maximizing exploration in the latent space performs comparable or better than VIME.
+										</p>
+										<p>
+											This work was presented at Deep Reinforcement Learning Symposium at the 2017 Conference on Neural Information Processing Systems.
+										</p>
+										<!-- <a href="#" class="special">Learn more</a> -->
+									</article>
+									<article>
+										<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
+										<div class="image"><img src="images/robothandover.png" alt="" /></div>
+										<h3 class="major">Mutual Learning and Adaptation for Robot to Human Handover Tasks</h3>
+										<p>
+											We focus on sample-efficient reinforcement learning in the context of a human with a disability. An initial policy is defined by imitation, which is then adapted to someone which a particular impairment according to some objective (distance to the human's hand, for example). We are able to learn efficient trajectories for object handovers from robot to human in as few as 50 trials.
+										</p>
+										<p>
+											This work was presented at the 2017 Interdisciplinary Conference on Reinforcement Learning and Decision Making.
+										</p>
+										<!-- <a href="#" class="special">Learn more</a> -->
+									</article>
+									<article>
+										<!-- <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a> -->
+										<div class="image"><img src="images/3d_infer.png" alt="" /></div>
+										<h3 class="major">Reinforcement learning for tasks in a 3D environment using only visual input</h3>
+										<p>
+											Deep reinforcement learning is an effective method for training autonomous agents to a high level of  performance on visual tasks. This work explores how reinforcement learning agents using deep Q-networks perform when visually processing 3-D virtual environments and how deeper network architectures  can  improve performance given the added difficulties of more complex environments.
+										</p>
+										<p>
+											We explored ways to handle 3D environments such as providing a point-cloud representation of the agent's environment or a depth map as input to the network. We found, however, that depth can accurately be inferred from 2D inputs in structured environments.	We provide results for tests on a variety of tasks in a virtual 3-D world and show that deeper convolutional neural networks lead to increased performance.
+										</p>
+										<p>
+											This work was presented at Deep Reinforcement Learning Workshop at the 2016 International Joint Conference in Artifical Intelligence.
+										</p>
+										<!-- <a href="#" class="special">Learn more</a> -->
+									</article>
+									<article>
+										<!-- <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a> -->
+										<div class="image"><img src="images/wordcloud_644x400.jpeg" alt="" /></div>
+										<h3 class="major">Visualizing Natural Language Features in Stacked Autoencoders</h3>
+										<p>
+											Visualizing the features of unsupervised deep networks is an important part of understanding what a network has learned. In this work, we present a method for visualizing a deep autoencoder's hidden layers when trained on natural language data with t-SNE plots and wordclouds. Our method is complementary to training error analysis and it can help determine an appropriate stopping point in the training process. It can also provide researchers insight into the semantic language features the network has extracted from the dataset. Finally, it can show a big picture view of what a network has learned and how the various features the network has extracted relate to one another in semantic hierarchies. We hope that these benefits will aid human understanding of deep networks and can help guide future experiments.
+										</p>
+										<p>
+											This work was presented at the 2016 European Symposium on Artificial Neural Networks.
+											<!-- We trained a stacked autoencoder on large text dataset derived from Wikipedia and visualized learned features with t-SNE and wordcloud techniques to understand how deep networks learn on natural language data. -->
+										</p>
+										<!-- <a href="#" class="special">Learn more</a> -->
+									</article>
+								</section>
+								<!-- <ul class="actions">
+									<li><a href="#" class="button">Browse All Projects</a></li>
+								</ul> -->
+							</div>
+						</section>
 
 						<!-- One -->
 							<section id="news" class="wrapper spotlight style1">
@@ -67,12 +134,12 @@
 										<!-- <p>Test</p> -->
 										<ul class="alt" style="text-align: left;">
 											<li><time datetime="2018-01"><b>January, 2018</b></time>: I am an RA funded by Intel tasked with creating educational material in machine learning and reinforcement learning.</li>
-											<li><time datetime="2017-12"><b>December, 2017</b></time>: I am presenting my work on <i>Information Maximizing Exploration with a Latent Dynamics Model</i> at the NIPS 2017 Deep RL Symposium.</li>
-											<li><time datetime="2017-09"><b>September, 2017</b></time>: I am a research assistant funded by Honda Research Institute studying the use of memory-augmented policies for long-term dependencies in reinforcement learning.</li>
-											<li><time datetime="2017-08"><b>August, 2017</b></time>: I am a teaching assistant for the fall '17 iteration of CSE 571 Artificial Intelligence at ASU.</li>
+											<li><time datetime="2017-12"><b>December, 2017</b></time>: I presented my work on <i>Information Maximizing Exploration with a Latent Dynamics Model</i> at the NIPS 2017 Deep RL Symposium.</li>
+											<li><time datetime="2017-09"><b>September, 2017</b></time>: I am now a research assistant funded by Honda Research Institute studying the use of memory-augmented policies for long-term dependencies in reinforcement learning.</li>
+											<li><time datetime="2017-08"><b>August, 2017</b></time>: I was a teaching assistant for the fall '17 iteration of CSE 571 Artificial Intelligence at ASU.</li>
 											<li><time datetime="2017-08"><b>August, 2017</b></time>: I reviewed for Humanoids 2017.</li>
-											<li><time datetime="2017-06"><b>June, 2017</b></time>: I am presenting my work on <i>Mutual Learning and Adaptation for Robot to Human Handover Tasks</i> at the 2017 Interdisciplinary Conference on Reinforcement Learning and Decision Making.</li>
-											<li><time datetime="2017-05"><b>May, 2017</b></time>: I will be spending the summer interning at Honda Research in Mountain View, CA.</li>
+											<li><time datetime="2017-06"><b>June, 2017</b></time>: I presented my work on <i>Mutual Learning and Adaptation for Robot to Human Handover Tasks</i> at the 2017 Interdisciplinary Conference on Reinforcement Learning and Decision Making.</li>
+											<li><time datetime="2017-05"><b>May, 2017</b></time>: I spent the summer as an intern at Honda Research in Mountain View, CA.</li>
 										</ul>
 									</div>
 								</div>
@@ -82,8 +149,8 @@
 							<section id="profile" class="wrapper alt spotlight style2">
 								<div class="inner">
 									<!-- <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a> -->
-									<div class="content">
-										<h2 class="major">Profile - <a href="https://tpbarron.github.io/papers/TrevorBarronCV.pdf">My CV</a></h2>
+									<div class="content" style="text-align: left;">
+										<h2 class="major">Profile - <a href="https://tpbarron.github.io/papers/TrevorBarronCV.pdf">CV Link</a></h2>
 
 										<h3 class="major">Industry Experience</h3>
 										<ul class="alt">
@@ -141,7 +208,7 @@
 
 											@article{barron2017sampleefficient,
 											  title={Sample-Efficient Reinforcement Learning for Robot to Human Handover Tasks},
-											  author={Trevor Barron and Heni Ben Amor},
+											  author={Trevor Barron, Heni Ben Amor},
 											  journal={The Multi-disciplinary Conference on Reinforcement Learning and Decision Making},
 											  year="2017"
 											}
@@ -154,14 +221,14 @@
 											}
 
 											@article{Barron2016ESANN,
-											  author="Trevor Barron and Matthew Whitehead",
+											  author="Trevor Barron, Matthew Whitehead",
 											  title="Visualizing Stacked Autoencoder Language Learning",
 											  JOURNAL="European Symposium on Artificial Neural Networks",
 											  YEAR="{2016}"
 											}
 
 											@misc{Barron2013Midstates,
-											  author="Trevor Barron and Matthew Whitehead",
+											  author="Trevor Barron, Matthew Whitehead",
 											  title="Latent Semantic Indexing and Word Vector Representations",
 											  YEAR="2013",
 											  journal={Undergraduate Research Symposium in the Physical Sciences, Math, and Computer Science at the University of Chicago},
@@ -190,70 +257,6 @@
 								</div>
 							</section>
 
-						<!-- Four -->
-							<section id="projects" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Projects</h2>
-									<p>A summary of some recent projects.</p>
-									<section class="features">
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a> -->
-											<div class="image"><img src="images/walker2d.png" alt="" /></div>
-											<h3 class="major">Information Maximizing Exploration with a Latent Dynamics Model</h3>
-											<p>
-												This work extended a previous exploration method, Variational Information Maximizing Exploration, that is based on the idea of optimism in the face of uncertainty. Essentially, we incentivize exploring parts of the environment about which little is known.
-											</p>
-											<p>
-												In VIME, a separate Bayesian dynamics model is learned and intrinsic reward bonuses are derived from the amount of information gained by visiting a state. Our key observation is based on a <a href="https://users.cs.duke.edu/~parr/icml08.pdf">relationship</a> between linear one-step forward models and linear value estimates. We propose fitting the dynamics model in the features found by the final hidden layer of the neural network value estimator. This has two significant advantages: (1) the dimensionality of the inputs are untied from the dimensionality of the Bayesian model and (2) the theory suggests that since the value estimate is linear in these features, the model can be as well. This simplifies the Bayesian modeling. We find this to be the case and observe that information maximizing exploration in the latent space performs comparable or better than VIME.
-											</p>
-											<!-- <a href="#" class="special">Learn more</a> -->
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
-											<div class="image"><img src="images/robothandover.png" alt="" /></div>
-											<h3 class="major">Mutual Learning and Adaptation for Robot to Human Handover Tasks</h3>
-											<p>
-												We focus on sample-efficient reinforcement learning in the context of a human with a disability. An initial policy is defined by imitation, which is then adapted to someone which a particular impairment according to some objective (distance to the human's hand, for example). We are able to learn efficient trajectories for object handovers from robot to human in as few as 50 trials.
-											</p>
-											<p>
-												This work was presented at the 2017 Interdisciplinary Conference on Reinforcement Learning and Decision Making.
-											</p>
-											<!-- <a href="#" class="special">Learn more</a> -->
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a> -->
-											<div class="image"><img src="images/3d_infer.png" alt="" /></div>
-											<h3 class="major">Reinforcement learning for tasks in a 3D environment using only visual input</h3>
-											<p>
-												Deep reinforcement learning is an effective method for  training  autonomous  agents  to  a  high  level of  performance  on  visual  tasks. This work  explores  how  reinforcement  learning  agents  using
-												deep Q-networks perform when visually processing
-												3-D virtual environments and how deeper network
-												architectures  can  improve  performance  given  the
-												added difficulties of more complex environments.
-
-												We explored ways to handle 3D environments such as providing a point-cloud representation of the agent's environment or a depth map as input to the network. We found, however, that depth can accurately be inferred from 2D inputs in structured environments.
-
-												We provide results for tests on a variety of tasks in
-												a  virtual  3-D  world  and  show  that  deeper  convolutional neural networks lead to increased performnce.
-											</p>
-											<!-- <a href="#" class="special">Learn more</a> -->
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a> -->
-											<div class="image"><img src="images/wordcloud_644x400.jpeg" alt="" /></div>
-											<h3 class="major">Visualizing Natural Language Features in Stacked Autoencoders</h3>
-											<p>
-												Visualizing the features of unsupervised deep networks is an important part of understanding what a network has learned. In this paper, we present a method for visualizing a deep autoencoder's hidden layers when trained on natural language data with t-SNE plots and wordclouds. Our method is complementary to training error analysis and it can help determine an appropriate stopping point in the training process. It can also provide researchers insight into the semantic language features the network has extracted from the dataset. Finally, it can show a big picture view of what a network has learned and how the various features the network has extracted relate to one another in semantic hierarchies. We hope that these benefits will aid human understanding of deep networks and can help guide future experiments.
-												<!-- We trained a stacked autoencoder on large text dataset derived from Wikipedia and visualized learned features with t-SNE and wordcloud techniques to understand how deep networks learn on natural language data. -->
-											</p>
-											<!-- <a href="#" class="special">Learn more</a> -->
-										</article>
-									</section>
-									<!-- <ul class="actions">
-										<li><a href="#" class="button">Browse All Projects</a></li>
-									</ul> -->
-								</div>
-							</section>
 
 					</section>
 
@@ -265,7 +268,7 @@
 
 							<ul class="contact">
 								<li class="fa-github"><a href="https://github.com/tpbarron">@tpbarron</a></li>
-								<li class="fa-envelope"><a href="#">lastname.firstname@gmail.com</a></li>
+								<li class="fa-envelope"><a href="">tpbarron@asu.edu</a></li>
 							</ul>
 							<!-- <ul class="copyright">
 								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
